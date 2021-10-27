@@ -6,12 +6,8 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^12.20.36",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": ">=16.12.0",
+    "react-dom": ">=16.12.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
@@ -20,13 +16,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:format && npm run lint:js",
+    "lint:format": "prettier --check \"src/**/*\"",
+    "lint:js": "eslint src/**",
+    "format": "prettier --write"
   },
   "browserslist": {
     "production": [
@@ -39,5 +33,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "react": ">=16.12.0",
+    "react-dom": ">=16.12.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.1"
   }
 }
