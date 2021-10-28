@@ -1,4 +1,6 @@
+import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../src/styles/global-styles';
+import theme from '../src/styles/theme';
 import { css } from 'styled-components';
 
 export const parameters = {
@@ -13,9 +15,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Story />
-    </>
+    </ThemeProvider>
   ),
 ];
