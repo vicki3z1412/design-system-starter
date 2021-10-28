@@ -22,7 +22,9 @@
     "lint:format": "prettier --check \"src/**/*\"",
     "lint:js": "eslint src/**",
     "format": "prettier --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "browserslist": {
     "production": [
@@ -41,8 +43,13 @@
     "react-dom": ">=16.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
@@ -50,6 +57,7 @@
     "@types/styled-components": "^5.1.15",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "babel-loader": "^8.2.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
