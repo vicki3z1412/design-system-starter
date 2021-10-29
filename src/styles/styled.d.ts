@@ -15,6 +15,10 @@ declare module 'styled-components' {
     colors: {
       main: string;
       secondary: string;
+      text: string;
+      success: string;
+      warning: string;
+      danger: string;
     };
     typography: {
       fontFamily: string;

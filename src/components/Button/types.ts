@@ -1,6 +1,7 @@
-export type ButtonProps = {
-  children: string;
+import React from 'react';
+
+export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   size: 'small' | 'medium' | 'large';
-  primary?: boolean;
+  variant: 'primary' | 'secondary' | 'default' | 'alert';
   disabled?: boolean;
-};
+}

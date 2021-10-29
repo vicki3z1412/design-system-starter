@@ -3,7 +3,11 @@ import { DefaultTheme } from 'styled-components';
 const theme: DefaultTheme = {
   colors: {
     main: '#98CA3E',
-    secondary: '#122D35',
+    secondary: '#112B33',
+    text: '#122D35',
+    success: '#4BCA81',
+    warning: '#E6B01E',
+    danger: '#CA4B4B',
   },
   typography: {
     fontFamily: 'Open sans, sans-serif',

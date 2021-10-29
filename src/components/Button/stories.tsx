@@ -8,7 +8,7 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ['small', 'medium', 'large'],
+      options: ['primary', 'secondary', 'default'],
     },
   },
 } as Meta;
