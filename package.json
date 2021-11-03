@@ -12,7 +12,7 @@
     "test:coverage": "jest --coverage",
     "lint": "npm run lint:format && npm run lint:js",
     "lint:format": "prettier --check \"src/**/*\"",
-    "lint:js": "eslint src",
+    "lint:js": "eslint ./src/**",
     "format": "prettier --write",
     "prepare": "husky install"
   },
@@ -27,6 +27,8 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "@rollup/plugin-alias": "^3.1.8",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
