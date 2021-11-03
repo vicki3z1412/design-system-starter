@@ -5,7 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "rollup -c rollup.config.js -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:ts && npm run test:jest",
+    "test:jest": "jest",
+    "test:ts": "tsc",
+    "test:staged": "jest --findRelatedTests",
+    "test:coverage": "jest --coverage",
+    "lint": "npm run lint:format && npm run lint:js",
+    "lint:format": "prettier --check \"src/**/*\"",
+    "lint:js": "eslint src",
+    "format": "prettier --write",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -25,13 +34,33 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-replace": "^3.0.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/eslint": "^7.28.2",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "babel-loader": "^8.2.3",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
     "rollup": "^2.59.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-serve": "^1.1.0",
     "typescript": "^4.4.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "npm run format",
+      "npm run lint",
+      "npm run test:staged"
+    ]
   }
 }
