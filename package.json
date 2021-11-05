@@ -14,7 +14,9 @@
     "lint:format": "prettier --check \"src/**/*\"",
     "lint:js": "eslint ./src/**",
     "format": "prettier --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +38,10 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-replace": "^3.0.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@types/eslint": "^7.28.2",
