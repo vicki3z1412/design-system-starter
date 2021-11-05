@@ -17,7 +17,7 @@
     "noEmit": true,
     "jsx": "react",
     "esModuleInterop": true,
-    "types": ["jest", "node"],
+    "types": ["jest", "node", "@testing-library/jest-dom"],
     "typeRoots": ["./types", "./node_modules/@types"]
   },
   "typedocOptions": {
@@ -26,6 +26,6 @@
     "out": "dist/_docs/code",
     "hideGenerator": true
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "./dist/**/*"],
+  "exclude": ["node_modules", "./dist/**/*"],
   "include": ["./src/**/*"]
 }
