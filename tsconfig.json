@@ -27,5 +27,8 @@
     "hideGenerator": true
   },
   "exclude": ["node_modules", "./dist/**/*"],
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "paths": {
+    "@styles/*": ["src/styles/*"]
+  }
 }

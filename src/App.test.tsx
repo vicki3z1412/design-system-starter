@@ -5,7 +5,7 @@ import App from './App';
 describe('App Test', () => {
   test('should render without failed', () => {
     render(<App />);
-    const text = screen.getByText('Welcome to React Typescript Starter');
+    const text = screen.getByText('Header');
     expect(text).toBeInTheDocument();
   });
 });

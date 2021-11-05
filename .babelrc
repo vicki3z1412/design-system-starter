@@ -9,7 +9,9 @@
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "plugins": ["babel-plugin-styled-components", {
-    "fileName": false
-  }]
+  "plugins": [
+    ["babel-plugin-styled-components", {
+      "fileName": false
+    }]
+  ]
 }
