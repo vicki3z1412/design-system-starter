@@ -20,7 +20,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -49,21 +49,28 @@
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.15",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^1.13.3",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "jest-styled-components": "^7.0.5",
     "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.59.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-serve": "^1.1.0",
+    "styled-components": "^5.3.3",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "typescript-plugin-styled-components": "^2.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": [
@@ -71,5 +78,8 @@
       "npm run lint",
       "npm run test:staged"
     ]
+  },
+  "dependencies": {
+    "styled-reset": "^4.3.4"
   }
 }
