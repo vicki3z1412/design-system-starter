@@ -19,7 +19,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  background-color: #efefef;
+  background-color: #dcdcdc;
   color: ${(props) => props.theme.colors.text};
 
   ${({ variant }) => {
@@ -58,4 +58,11 @@ export const ButtonWrapper = styled.button<ButtonProps>`
         `;
     }
   }}
+  
+  ${({ disabled, loading }) =>
+    (loading || disabled) &&
+    css`
+      opacity: 50%;
+      cursor: default;
+    `}
 `;
