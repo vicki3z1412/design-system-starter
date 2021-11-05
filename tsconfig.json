@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "importHelpers": true,
-    "outDir": "./dist/build",
-    "target": "ESNext",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -15,9 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "jsx": "react-jsx",
     "typeRoots": ["./types", "./node_modules/@types"]
   },
   "typedocOptions": {
